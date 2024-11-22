@@ -1,0 +1,146 @@
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="fbweb.css" />
+
+</head>
+
+<body>
+
+<div class="wrapper"> 
+		
+	<div class="topsection">
+		<div class="textwrap">
+			<h1>Feedback Networks</h1>
+			<p>
+				Randomly create a network of audio processes in a feedback configuration. Click on individual modules or layers to bypass.
+			</p>
+			<p>
+				Enable and disable particular node types with the checkboxes before creating the network to curate the randomised selection of nodes.
+			</p>
+		</div>
+
+		<div class="controls">
+			<p>
+				<p>
+					<img src="images/loop.png" width="100px" />
+				</p>
+				<label for="voiceCountSlider">Layers: </label><output id="voiceCountDisplay">4</output><br>
+				
+				<input type="range" id="voiceCountSlider" class="control-x" min="1" max="8" value="4"  step="1" />
+				
+				<!-- list="gain-vals" -->
+			</p>
+			<p>
+				<button id="onOff" class="control-power" role="switch" aria-checked="false" 
+				data-power="off">
+					<span>Create Feedback Network</span>
+				</button>
+			</p>
+			<p>
+				<button id="resetButton" role="switch" aria-checked="false">
+					<span>Reset</span>
+				</button>
+			</p>
+			<label for="noise">
+					<input type="checkbox" id="noise" name="noise" checked> noise on/off
+				</label>
+			
+		</div>
+
+		<div class="checkboxColumn">
+				
+
+				<p>Modules to choose from when creating the network:</p>
+				<label for="bandpass">
+					<input type="checkbox" id="bandpass" name="bandpass" checked> bandpass
+				</label>
+				<br>
+				<label for="multi-delay">
+					<input type="checkbox" id="multi-delay" name="multi-delay" checked> multi-delay
+				</label>
+				<br>
+				<label for="moving-filter">
+					<input type="checkbox" id="moving-filter" name="moving-filter" checked> moving filter
+				</label>
+				<br>
+				<label for="moving-delay">
+					<input type="checkbox" id="moving-delay" name="moving-delay" checked> moving delay
+				</label>
+				<br>
+				<label for="freqshift">
+					<input type="checkbox" id="freqshift" name="freqshift" checked> freqshift
+				</label>
+				<br>
+				<label for="filterbank">
+					<input type="checkbox" id="filterbank" name="filterbank" checked> filterbank
+				</label>
+				<br>
+				<label for="chorus">
+					<input type="checkbox" id="chorus" name="chorus" checked> chorus
+				</label>
+				<br>
+				<label for="kick">
+					<input type="checkbox" id="kick" name="kick" checked> kick
+				</label>
+				<br>
+				<label for="click-delay">
+					<input type="checkbox" id="click-delay" name="click-delay" checked> click delay
+				</label>
+				<br>
+				<label for="ring-mod">
+					<input type="checkbox" id="ring-mod" name="ring-mod" checked> ring mod
+				</label>
+				<br>
+				<label for="tremolo">
+					<input type="checkbox" id="tremolo" name="tremolo" checked> tremolo
+				</label>
+				<br>
+				<label for="reverb">
+					<input type="checkbox" id="reverb" name="reverb" checked> reverb
+				</label>
+			</div>
+		</div>
+
+		<!-- <p>
+			<button id="randomise" class="control-power" role="switch" aria-checked="false" data-power="off">
+				<span>Randomise</span>
+			</button>
+		</p> -->
+
+		
+		<!-- 
+			Random seed storage... 
+			not simple - need to write new pseudorandom
+			https://stackoverflow.com/questions/521295/seeding-the-random-number-generator-in-javascript
+
+			Toggle between all nodes outputting and just the final one?<br>
+
+			General control?<br>
+		-->
+
+
+
+		<!-- 
+		<button id="trig" class="env-trig" role="button">
+			<span>Trigger Envelope</span>
+		</button>  
+		-->
+
+
+	
+	<div class="canvases"> 
+		<canvas class="visualizer" width="720" height="90"></canvas> 
+		<canvas class="network" width="800" height="600"></canvas> 
+	</div>
+		
+
+</div>
+<script src="reverb.js"></script>
+<script src="audio-module-types.js"></script>
+<script src="audio-class.js"></script>
+<script src="colours.js"></script>
+<script src="audio.js"></script>
+<script src="display.js"></script>
+</body>
+</html>

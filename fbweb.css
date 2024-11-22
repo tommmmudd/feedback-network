@@ -1,0 +1,112 @@
+body {
+	/*font-family: Cairo, Arial, sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	/* background-color: #EFEFEF;	 */
+	background-color: #eaeaf2; 		/* tnv: #79dafd;	browns: #f0e6e3; */
+	color: #555;
+	line-height: 1.2em;
+	text-align: left;
+	
+}
+
+.wrapper {
+	margin: 50px auto;
+    width: 95%;
+}
+
+.topsection {
+  	align-items: center;
+  	width: 100%;
+  	margin: 0px auto;
+  	display: flex;
+  	justify-content: center;
+  	/* border:1px solid black; */
+}
+
+.canvases {
+	display:block;
+	width: 100%;
+	margin: 0px;
+  	align-items: center;
+  	
+  	display: flex;
+    flex-direction: column;
+    gap: 0px; /* Space between canvas elements */
+
+    /* border:1px solid black; */
+}
+
+.textwrap {
+	
+	margin: 10px 20px auto;
+    max-width: 400px;
+    float: left;
+    /* border:1px solid black; */
+}
+
+.controls {
+	float: left;
+	text-align: center;
+	margin: 10px 20px auto;
+	/* border:1px solid black; */
+	min-width: 200px;
+}
+
+
+
+.checkboxColumn
+{
+	
+	width: 220;
+	float: left;
+	margin: 10px 20px auto;
+	/* border:1px solid black; */
+}
+
+
+/*
+.checkboxes
+{
+	margin: 0 auto;
+	width: 444;
+	text-align: left;
+}
+*/
+
+/* getting checkbox labels to align */
+input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 2px; /* Optional spacing */
+}
+
+label {
+    vertical-align: middle;
+}
+
+.slider-width300
+{
+    width: 180px;
+}
+
+
+.control-power {
+	width: 180px;
+}
+
+.powerbutton {
+	background: #efefef;
+}
+
+h1, h2, h3, h4 {line-height: 15px;}
+h1 { font-size: 34px; padding: 22px 0 20px 0; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px;  line-height: 19px;}
+h4 { font-size: 15px; }
+
+
+a:link { color: #119; text-decoration: none;}
+a:hover { padding: 2px 0 2px 0px;}
+a:visited { color: #449; text-decoration: none;}
+
+
